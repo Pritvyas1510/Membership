@@ -2,6 +2,7 @@
 import { useEffect, useState } from "react";
 import { TbMenuDeep, TbX } from "react-icons/tb";
 import { Link } from "react-router-dom";
+import Logo from "../../Public/Image/Logo.png";
 
 const Navbar = () => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -36,14 +37,16 @@ const Navbar = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-20">
           {/* Logo */}
-          <Link to="/" className="flex items-center gap-3">
-            <h1 className="text-xl font-extrabold tracking-tight text-[#1c140d]">
-              Monark <span className="text-orange-600">Foundation</span>
+          <Link to="/" className="flex items-center gap-1">
+            <img src={Logo} alt="Logo" className="w-[70px]" />
+            <h1 className="text-xl font-extrabold tracking-tight text-[#2c5466]">
+              Monark <span className="text-[#2c5466]">Foundation</span>
             </h1>
           </Link>
 
-          {/* Desktop Links */}
-          <div className="hidden md:flex items-center gap-8">
+       
+          {/* Desktop Links - Perfect Center */}
+          <div className="hidden md:flex absolute left-1/2 -translate-x-1/2 items-center gap-8">
             {navLinks.map((item) => (
               <Link
                 key={item.name}
@@ -57,10 +60,11 @@ const Navbar = () => {
 
           {/* Actions */}
           <div className="flex items-center gap-4">
-           <Link to="/register"><button className="hidden sm:flex h-10 p-2 rounded-lg bg-orange-500 hover:bg-orange-600 text-white text-sm font-bold">
-              Register
-            </button>
-            </Link> 
+            <Link to="/register">
+              <button className="hidden sm:flex h-10 p-2 rounded-lg bg-orange-500 hover:bg-orange-600 text-white text-sm font-bold">
+                Register
+              </button>
+            </Link>
             {/* Mobile Menu Button */}
             <button
               className="md:hidden p-2 text-black rounded-lg hover:bg-black/5"
@@ -87,9 +91,12 @@ const Navbar = () => {
               </Link>
             ))}
 
-            <Link to="/register"> <button className="mt-2 h-11 w-full rounded-lg bg-orange-500 text-white font-bold">
-             Register 
-            </button> </Link>
+            <Link to="/register">
+              {" "}
+              <button className="mt-2 h-11 w-full rounded-lg bg-orange-500 text-white font-bold">
+                Register
+              </button>{" "}
+            </Link>
           </div>
         </div>
       )}

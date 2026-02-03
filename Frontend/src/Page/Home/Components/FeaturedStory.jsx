@@ -1,4 +1,5 @@
 import { TbArrowIteration } from "react-icons/tb";
+import Logo from "../../../../Public/Image/Logo.png"
 
 // src/components/FeaturedStory.jsx
 const FeaturedStory = () => {
@@ -23,18 +24,15 @@ const FeaturedStory = () => {
 
               {/* Floating Stat Box */}
               <div className="absolute -bottom-8 -right-8 md:bottom-8 md:-right-8 bg-white dark:bg-surface-dark p-6 rounded-xl shadow-xl border border-gray-100 dark:border-white/10 max-w-xs animate-bounce" style={{ animationDuration: "3s" }}>
-                <div className="flex items-center gap-4 mb-3">
+                <div className="flex items-center gap-4 ">
                   <div className="size-12 rounded-full bg-green-100 text-green-600 flex items-center justify-center">
-                    <span className="material-symbols-outlined text-2xl"> <img src="https://cdn.pixabay.com/photo/2024/02/02/04/20/ai-generated-8547215_640.png" className="rounded-full border-2 border-black" alt="Profile" /></span>
+                    <span className="material-symbols-outlined text-lg"> <img src={Logo} className="rounded-full border-2 border-black" alt="Profile" /></span>
                   </div>
                   <div>
-                    <p className="text-xs text-blue-800 uppercase font-bold">Energy Generated</p>
-                    <p className="text-xl font-black text-text-main dark:text-gray-800">500 kW/h</p>
+                    <p className="text-[#2c5466] text-lg uppercase font-bold">Monark Foundation</p>
                   </div>
                 </div>
-                <p className="text-sm text-gray-600 dark:text-gray-400 leading-snug">
-                  Providing sustainable power to 3 schools and a medical center.
-                </p>
+                
               </div>
             </div>
           </div>

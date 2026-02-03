@@ -1,6 +1,5 @@
 import React from 'react'
 import Hero from './Components/Hero'
-import TrustedPartners from './Components/TrustedPartners'
 import MissionSection from './Components/MissionSection'
 import Initiatives from './Components/Initiatives'
 import FeaturedStory from './Components/FeaturedStory'
@@ -14,7 +13,6 @@ const Home = () => {
   return (
     <div>
         <Hero/>
-        <TrustedPartners/>
         <MissionSection/>
         <Initiatives/>
         <FeaturedStory/>

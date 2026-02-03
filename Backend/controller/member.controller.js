@@ -18,7 +18,7 @@ export const registerMember = async (req, res) => {
       return res.status(400).json({ message: "Member already exists" });
     }
 
-    // ✅ Generate sequential ID
+    // Generate sequential ID
     const memberId = await generateMemberId();
 
     const member = await Member.create({
@@ -30,7 +30,7 @@ export const registerMember = async (req, res) => {
       region,
       interestedInHead,
       memberId,
-      photoUrl: req.file?.path,
+      photoUrl: req.file?.path, // ✅ Cloudinary URL
       status: "active",
     });
 

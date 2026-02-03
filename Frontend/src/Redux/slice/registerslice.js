@@ -8,7 +8,11 @@ export const registerMember = createAsyncThunk(
   "member/register",
   async (formData, { rejectWithValue }) => {
     try {
-      const res = await api.post("/member/register", formData);
+      const res = await api.post("/member/register", formData, {
+        headers: {
+          "Content-Type": "multipart/form-data",
+        },
+      });
 
       return res.data;
     } catch (error) {
